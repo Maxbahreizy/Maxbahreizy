@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Max Bahreizy</title>
+    <title>Max Bahreizy - Wujudkan Website Impianmu!</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        /* CSS tetap sama seperti kode sebelumnya */
         * {
             margin: 0;
             padding: 0;
@@ -356,26 +357,32 @@
             overflow: hidden;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             position: relative;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.3s ease;
             opacity: 0;
-            animation: slideInUp 0.8s ease-out forwards;
+            transform: translateY(50px) scale(0.95);
+        }
+
+        .project-card.animate {
+            animation: fadeInUp 0.8s ease-out forwards;
             animation-delay: calc(0.2s * var(--index));
         }
 
         .project-card:hover {
-            transform: translateY(-10px) scale(1.05);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            transform: translateY(-15px) scale(1.05);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2), 0 0 15px rgba(59, 130, 246, 0.5);
+            border: 2px solid #3b82f6;
         }
 
         .project-card img {
             width: 100%;
             height: 200px;
             object-fit: cover;
-            transition: transform 0.3s ease;
+            transition: transform 0.5s ease;
+            position: relative;
         }
 
         .project-card:hover img {
-            transform: scale(1.1);
+            transform: scale(1.1) translateY(-10px);
         }
 
         .project-card h3 {
@@ -407,6 +414,7 @@
         .project-btn:hover {
             background: linear-gradient(90deg, #1e40af, #3b82f6);
             transform: scale(1.1);
+            animation: bounce 0.4s ease;
         }
 
         /* Order Section Styles */
@@ -443,26 +451,31 @@
             overflow: hidden;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             position: relative;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.3s ease;
             opacity: 0;
-            animation: slideInUp 0.8s ease-out forwards;
+            transform: translateY(50px) scale(0.95);
+        }
+
+        .order-card.animate {
+            animation: fadeInUp 0.8s ease-out forwards;
             animation-delay: calc(0.2s * var(--index));
         }
 
         .order-card:hover {
-            transform: translateY(-10px) scale(1.05);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            transform: translateY(-15px) scale(1.05);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2), 0 0 15px rgba(37, 211, 102, 0.5);
+            border: 2px solid #25D366;
         }
 
         .order-card img {
             width: 100%;
             height: 200px;
             object-fit: cover;
-            transition: transform 0.3s ease;
+            transition: transform 0.5s ease;
         }
 
         .order-card:hover img {
-            transform: scale(1.1);
+            transform: scale(1.1) translateY(-10px);
         }
 
         .order-card h3 {
@@ -516,6 +529,7 @@
         .order-btn:hover {
             background: linear-gradient(90deg, #128C7E, #25D366);
             transform: scale(1.1);
+            animation: bounce 0.4s ease;
         }
 
         /* Contact and Footer Section Styles */
@@ -738,6 +752,16 @@
             50% { border-color: #fff; }
         }
 
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(50px) scale(0.95); }
+            100% { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             nav {
@@ -844,20 +868,20 @@
             <span class="website-name">Max Bahreizy</span>
         </div>
         <nav>
-            <a href="#home" style="--i: 1;" data-tooltip="Beranda">Beranda</a>
-            <a href="#about" style="--i: 2;" data-tooltip="Tentang">Tentang</a>
-            <a href="#project" style="--i: 3;" data-tooltip="Proyek">Proyek</a>
-            <a href="#order" style="--i: 4;" data-tooltip="Pesan">Pesan</a>
-            <a href="#contact" style="--i: 5;" data-tooltip="Kontak">Kontak</a>
+            <a href="#home" style="--i: 1;">Beranda</a>
+            <a href="#about" style="--i: 2;">Kenali Saya</a>
+            <a href="#project" style="--i: 3;">Karya Keren</a>
+            <a href="#order" style="--i: 4;">Buat Website</a>
+            <a href="#contact" style="--i: 5;">Ayo Ngobrol</a>
         </nav>
         <div class="menu-toggle">☰</div>
     </header>
 
     <section id="home">
         <div class="banner-content">
-            <h1>Halo, Saya Max Bahreizy</h1>
-            <p>Mengubah ide menjadi situs web yang menarik dan ramah pengguna dengan teknologi terkini dan desain kreatif.</p>
-            <a href="#project" class="banner-btn">Mulai Proyek Anda</a>
+            <h1>Hai, Saya Max Bahreizy!</h1>
+            <p>Wujudkan ide brilianmu jadi website keren yang bikin bisnis melesat dengan desain modern dan teknologi canggih!</p>
+            <a href="#project" class="banner-btn">Mulai Wujudkan Sekarang!</a>
         </div>
     </section>
 
@@ -867,34 +891,34 @@
                 <img src="Banner.png" alt="Max Bahreizy">
             </div>
             <div class="about-text">
-                <h2>Tentang Saya</h2>
-                <p>Halo, saya Max Bahreizy, seorang desainer dan pengembang web yang bersemangat untuk menciptakan situs web yang menarik dan ramah pengguna dengan hasil yang nyata. Dengan pengalaman bertahun-tahun dalam membuat solusi digital yang disesuaikan, saya spesialis dalam mewujudkan visi Anda.</p>
-                <p>Baik Anda membutuhkan portofolio yang elegan, platform e-commerce yang kuat, atau situs bisnis profesional, saya di sini untuk menghadirkan desain berkualitas tinggi yang memikat dan mengonversi. Mari bekerja sama untuk menghidupkan merek Anda!</p>
-                <a href="#contact" class="about-btn">Hubungi Saya</a>
+                <h2>Kenali Saya</h2>
+                <p>Nama saya Max Bahreizy, seorang penggila desain dan pengembang web yang siap bikin ide kamu hidup! Dengan pengalaman dan passion, saya ciptakan website yang nggak cuma keren, tapi juga bikin pengunjung betah dan bisnis kamu naik level.</p>
+                <p>Mau portofolio yang elegan, toko online yang laris manis, atau website bisnis yang profesional? Saya siap bantu wujudkan mimpimu dengan desain yang memikat! Yuk, mulai kolaborasi!</p>
+                <a href="#contact" class="about-btn">Ayo Ngobrol Sekarang!</a>
             </div>
         </div>
     </section>
 
     <section id="project">
-        <h2>Proyek Saya</h2>
+        <h2>Karya Keren Saya</h2>
         <div class="project-container">
-            <div class="project-card animate-on-scroll" style="--index: 1;">
-                <img src="project2.1.png" alt="Situs Web E-Commerce">
-                <h3>Situs Web E-Commerce</h3>
-                <p>Toko online yang sepenuhnya responsif dengan checkout yang mulus dan antarmuka modern.</p>
-                <a href="#" class="project-btn" data-modal="modal1">Lihat Desain</a>
+            <div class="project-card" style="--index: 1;">
+                <img src="project2.1.png" alt="Toko Online Keren">
+                <h3>Toko Online Keren</h3>
+                <p>Bikin jualanmu laris dengan toko online super responsif, checkout mudah, dan desain yang bikin pelanggan jatuh cinta!</p>
+                <a href="#" class="project-btn" data-modal="modal1">Cek Kerennya!</a>
             </div>
             <div class="project-card" style="--index: 2;">
-                <img src="Project1.1.png" alt="Situs Web Portofolio">
-                <h3>Situs Web Portofolio</h3>
-                <p>Portofolio pribadi yang elegan untuk memamerkan karya Anda dengan penuh gaya.</p>
-                <a href="#" class="project-btn" data-modal="modal2">Lihat Desain</a>
+                <img src="Project1.1.png" alt="Portofolio Elegan">
+                <h3>Portofolio Elegan</h3>
+                <p>Tunjukkan karya terbaikmu dengan website portofolio yang stylish dan bikin semua orang terpukau!</p>
+                <a href="#" class="project-btn" data-modal="modal2">Cek Kerennya!</a>
             </div>
             <div class="project-card" style="--index: 3;">
-                <img src="Project3.1.png" alt="Situs Web Bisnis">
-                <h3>Situs Web Bisnis</h3>
-                <p>Situs web profesional untuk bisnis dengan fitur dinamis.</p>
-                <a href="#" class="project-btn" data-modal="modal3">Lihat Desain</a>
+                <img src="Project3.1.png" alt="Website Bisnis Profesional">
+                <h3>Website Bisnis Profesional</h3>
+                <p>Angkat level bisnismu dengan website profesional yang penuh fitur canggih dan desain modern!</p>
+                <a href="#" class="project-btn" data-modal="modal3">Cek Kerennya!</a>
             </div>
         </div>
 
@@ -902,21 +926,21 @@
         <div class="modal" id="modal1">
             <div class="modal-content">
                 <span class="close-btn">×</span>
-                <h3>Desain Situs Web E-Commerce</h3>
-                <p>Jelajahi koleksi desain platform e-commerce modern dengan navigasi yang mulus dan tata letak responsif.</p>
+                <h3>Desain Toko Online Keren</h3>
+                <p>Lihat koleksi desain toko online modern dengan navigasi super mulus dan tampilan yang responsif di semua perangkat!</p>
                 <div class="design-gallery">
-                    <img src="project2.1.png" alt="Desain E-Commerce 1">
-                    <img src="project2.2.png" alt="Desain E-Commerce 2">
-                    <img src="project2.3.png" alt="Desain E-Commerce 3">
-                    <img src="project2.4.png" alt="Desain E-Commerce 4">
+                    <img src="project2.1.png" alt="Desain Toko Online 1">
+                    <img src="project2.2.png" alt="Desain Toko Online 2">
+                    <img src="project2.3.png" alt="Desain Toko Online 3">
+                    <img src="project2.4.png" alt="Desain Toko Online 4">
                 </div>
             </div>
         </div>
         <div class="modal" id="modal2">
             <div class="modal-content">
                 <span class="close-btn">×</span>
-                <h3>Desain Situs Web Portofolio</h3>
-                <p>Koleksi desain portofolio yang bersih dan elegan untuk menonjolkan proyek dan keterampilan Anda.</p>
+                <h3>Desain Portofolio Elegan</h3>
+                <p>Cek koleksi desain portofolio yang bersih, elegan, dan siap bikin karya serta keahlianmu bersinar!</p>
                 <div class="design-gallery">
                     <img src="Project1.1.png" alt="Desain Portofolio 1">
                     <img src="Project1.2.png" alt="Desain Portofolio 2">
@@ -929,8 +953,8 @@
         <div class="modal" id="modal3">
             <div class="modal-content">
                 <span class="close-btn">×</span>
-                <h3>Desain Situs Web Bisnis</h3>
-                <p>Koleksi situs web bisnis profesional dengan konten dinamis dan antarmuka yang ramah pengguna.</p>
+                <h3>Desain Website Bisnis Profesional</h3>
+                <p>Lihat koleksi website bisnis dengan fitur dinamis dan desain yang bikin brandmu tampil beda!</p>
                 <div class="design-gallery">
                     <img src="project3.1.png" alt="Desain Bisnis 1">
                     <img src="project3.2.png" alt="Desain Bisnis 2">
@@ -943,47 +967,47 @@
     </section>
 
     <section id="order">
-        <h2>Pesan Situs Web Anda</h2>
+        <h2>Buat Website Impianmu Sekarang!</h2>
         <div class="order-container">
             <div class="order-card" style="--index: 1;">
-                <img src="sampul-order1.jpg" alt="Situs Web E-Commerce">
-                <h3>Situs Web E-Commerce</h3>
-                <p>Luncurkan toko online Anda dengan desain responsif dan ramah pengguna. Cocok untuk menjual produk dengan checkout yang mulus.</p>
+                <img src="sampul-order1.jpg" alt="Toko Online Keren">
+                <h3>Toko Online Keren</h3>
+                <p>Dorong penjualanmu dengan toko online yang responsif, mudah digunakan, dan punya checkout super praktis!</p>
                 <div class="price-container">
                     <span class="original-price">Rp 500.000</span>
-                    <span class="discounted-price">Rp 100.000 (Diskon 80%)</span>
+                    <span class="discounted-price">Hanya Rp 100.000 (Hemat 80%!)</span>
                 </div>
-                <a href="https://wa.me/6285745363245?text=Halo%20Max%2C%20saya%20ingin%20memesan%20Situs%20Web%20E-Commerce" class="order-btn" target="_blank">Pesan via WhatsApp</a>
+                <a href="https://wa.me/6285745363245?text=Halo%20Max%2C%20saya%20mau%20pesan%20Toko%20Online%20Keren!" class="order-btn" target="_blank">Pesan Sekarang via WA!</a>
             </div>
             <div class="order-card" style="--index: 2;">
-                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="Situs Web Portofolio">
-                <h3>Situs Web Portofolio</h3>
-                <p>Tampilkan karya Anda dengan situs web portofolio yang elegan dan modern yang disesuaikan dengan merek pribadi Anda.</p>
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="Portofolio Elegan">
+                <h3>Portofolio Elegan</h3>
+                <p>Pamerin karya terbaikmu dengan website portofolio yang modern dan sesuai dengan gayamu!</p>
                 <div class="price-container">
                     <span class="original-price">Rp 500.000</span>
-                    <span class="discounted-price">Rp 200.000 (Diskon 60%)</span>
+                    <span class="discounted-price">Hanya Rp 200.000 (Hemat 60%!)</span>
                 </div>
-                <a href="https://wa.me/6285745363245?text=Halo%20Max%2C%20saya%20ingin%20memesan%20Situs%20Web%20Portofolio" class="order-btn" target="_blank">Pesan via WhatsApp</a>
+                <a href="https://wa.me/6285745363245?text=Halo%20Max%2C%20saya%20mau%20pesan%20Portofolio%20Elegan!" class="order-btn" target="_blank">Pesan Sekarang via WA!</a>
             </div>
             <div class="order-card" style="--index: 3;">
-                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40" alt="Situs Web Bisnis">
-                <h3>Situs Web Bisnis</h3>
-                <p>Tingkatkan bisnis Anda dengan situs web profesional yang memiliki konten dinamis dan desain modern.</p>
+                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40" alt="Website Bisnis Profesional">
+                <h3>Website Bisnis Profesional</h3>
+                <p>Bikin bisnismu makin bersinar dengan website profesional, fitur canggih, dan desain kece!</p>
                 <div class="price-container">
                     <span class="original-price">Rp 500.000</span>
-                    <span class="discounted-price">Rp 100.000 (Diskon 80%)</span>
+                    <span class="discounted-price">Hanya Rp 100.000 (Hemat 80%!)</span>
                 </div>
-                <a href="https://wa.me/6285745363245?text=Halo%20Max%2C%20saya%20ingin%20memesan%20Situs%20Web%20Bisnis" class="order-btn" target="_blank">Pesan via WhatsApp</a>
+                <a href="https://wa.me/6285745363245?text=Halo%20Max%2C%20saya%20mau%20pesan%20Website%20Bisnis%20Profesional!" class="order-btn" target="_blank">Pesan Sekarang via WA!</a>
             </div>
         </div>
     </section>
 
     <section id="contact">
-        <h2>Hubungi Saya</h2>
-        <p>Punya ide proyek? Mari terhubung dan wujudkan!</p>
+        <h2>Ayo Terhubung!</h2>
+        <p>Punya ide keren? Yuk, wujudkan bareng saya sekarang!</p>
         <div class="contact-container">
             <div class="contact-info">
-                <h3>Hubungi Sekarang</h3>
+                <h3>Langsung Chat Saya!</h3>
                 <p>Email: Zaiqfaisal@gmail.com</p>
                 <p>Telepon: +62 857 4536 3245</p>
                 <div class="social-icons">
@@ -995,7 +1019,7 @@
             </div>
         </div>
         <div class="footer">
-            <p>© Max Bahreizy 2025. Hak Cipta Dilindungi.</p>
+            <p>Dibuat dengan 💙 oleh Max Bahreizy © 2025</p>
         </div>
     </section>
 
@@ -1071,7 +1095,7 @@
             });
         });
 
-        // Animation on Scroll
+        // Animation on Scroll for Project and Order Cards
         const animateOnScroll = (entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -1085,13 +1109,8 @@
             threshold: 0.1
         });
 
-        document.querySelectorAll('.animate-on-scroll').forEach(element => {
-            observer.observe(element);
-        });
-
-        // Add animate class to trigger CSS animations
         document.querySelectorAll('.project-card, .order-card').forEach(card => {
-            card.classList.add('animate-on-scroll');
+            observer.observe(card);
         });
 
         // Lazy Load Images
